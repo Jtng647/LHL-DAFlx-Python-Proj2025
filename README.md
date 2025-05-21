@@ -5,7 +5,7 @@ The scope of this project was to demonstrate the ability to apply statistical mo
 
 ## Process
 ### Part 1: CityBikes API
-The first part of this project works with the CityBikes API to demonstrate the ability to retrieve data and parse the desired information into a Pandas DataFrame. The corresponding script can be found in the "notebooks" folder of this repo under the file name "city_bikes_completed.ipynb".
+The first part of this project works with the CityBikes API to demonstrate the ability to retrieve data and parse the desired information into a Pandas DataFrame. The corresponding script can be found in the "notebooks" folder of this repo under the file name ["city_bikes_completed.ipynb"](https://github.com/Jtng647/LHL-DAFlx-Python-Proj2025/blob/main/notebooks/city_bikes_completed.ipynb).
 
 #### Step 1:
 The CityBike API was explored to understand its structure and the syntaxt for sending requests to it. Once this was done, a Python script to retrieve said data for the city of Osaka, Japan (city of choice) was written using the Python API commands. This data was then stored in a JSON. Of note, since the city of Osaka has multiple Bike Share networks, the Docomo Bike Share network was chosen as the representative network for Osaka.
@@ -20,7 +20,7 @@ Finally, the parsed data was put into a Pandas DataFrame, using the "json_normal
 An "optional" section to download/save the data as a JSON/CSV into a stored local file was added. This is especially useful for the purposes of this project as it will mean not having to send multiple pull requests each time the script is run in the future, when performing analytical functions. The data can then be analyzed (cleaned, manipulated, etc.) as a "snapshot" of when the initial retrieve request was sent. It can be commented out or skipped (if running in a notebook). Please see the files in the directory path Data > Part 1 > osaka_docomo_stations.json and osaka_docomo_stations.csv for these output date files.
 
 ### Part 2: Foursquare and Yelp APIs
-The second part of this project is similar to the first in that it requires retrieving information from an API, except this time it will demonstrate retrieving data from 2 separate APIs: Foursquare and Yelp. The corresponding script can be found in the "notebooks" folder of this repo under the file name "city_bikes_completed.ipynb".
+The second part of this project is similar to the first in that it requires retrieving information from an API, except this time it will demonstrate retrieving data from 2 separate APIs: Foursquare and Yelp. The corresponding script can be found in the "notebooks" folder of this repo under the file name ["yelp_foursquare_EDA_completed.ipynb"](https://github.com/Jtng647/LHL-DAFlx-Python-Proj2025/blob/main/notebooks/yelp_foursquare_EDA_completed.ipynb).
 
 #### Step 1:
 First, we establish the imports that will be required for this envrironment for our purposes. The libraries "OS", "requests", "pandas", and "json" are all imported here. We then also establish the environmental variables - in this case, API keys - that will be used to call the APIs for data. Finally, the JSON from Part 1 - "osaka_docomo_stations.json" (seen in the "data" directory of this repo) is loaded into the processing environment so that the bike station coordinates can be pulled in the API calls.
@@ -37,7 +37,7 @@ Once the data has been retrieved, we then parse the data for the specific inform
 Similar to in Part 1, the resulting DataFrame can be exported as JSON and CSV for ease of perusal, and also use in later analysis.
 
 ### Part 3: Joining the Data
-The third part of this project requires taking the data from Part 1 & 2, and joining them together to create a new DataFrame and to visualize it to explore the data. A custom database can be created at this point as well for processing and analysis use later. The corresponding script can be found in the "notebooks" folder of this repo under the file named "joining_data_completed.ipynb".
+The third part of this project requires taking the data from Part 1 & 2, and joining them together to create a new DataFrame and to visualize it to explore the data. A custom database can be created at this point as well for processing and analysis use later. The corresponding script can be found in the "notebooks" folder of this repo under the file named ["joining_data_completed.ipynb"](https://github.com/Jtng647/LHL-DAFlx-Python-Proj2025/blob/main/notebooks/joining_data_completed.ipynb).
 
 #### Step 1:
 The data from PArt 1 & 2 are joined together to form it's own DataFrame. The "Station Name" column of data is used as the primary key for both as it is the data that is present in both sets of data.
@@ -49,7 +49,7 @@ Applying the Exploratory Data Analysis (EDA) process, the data (which was alread
 The data was then used to create our very own SQLite database via SQLite3 in Python. The 2 dataframes became their own tables in the database. Both sets of data were then validated by being queried and JOINed to ensure the data would output and could be manipulated as expected.
 
 ### Part 4: Building a Model
-The fourth part of this project is to take the data and analyze it using statistical methods and analysis. Namely a regression model to grade and interpret correlation between the number of bikes at a station and the characteristics of the restaurants in that location. In this case, the restaurants rating was used. The corresponding script can be found in the "notebooks" folder of this repo under the file named "model_building_completed.ipynb".
+The fourth part of this project is to take the data and analyze it using statistical methods and analysis. Namely a regression model to grade and interpret correlation between the number of bikes at a station and the characteristics of the restaurants in that location. In this case, the restaurants rating was used. The corresponding script can be found in the "notebooks" folder of this repo under the file named ["model_building_completed.ipynb"](https://github.com/Jtng647/LHL-DAFlx-Python-Proj2025/blob/main/notebooks/model_building_completed.ipynb).
 
 #### Step 1:
 A regression model was built using the statsmodels/api library in Python. Using the joined DataFrame created in Part 3, it was loaded into the model with the Number of Bikes ("free_bikes") data as the Dependent Variable, and the Restaurant Ratings ("venue_rating") data as the Independent Variable.
